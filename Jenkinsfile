@@ -4,12 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                echo 'Cloning Repository'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t demo-site .'
@@ -31,3 +25,4 @@ pipeline {
 
     }
 
+}
